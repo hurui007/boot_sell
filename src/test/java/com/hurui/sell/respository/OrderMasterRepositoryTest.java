@@ -46,7 +46,6 @@ public class OrderMasterRepositoryTest {
         for(OrderMaster record:list){
             System.out.println(record);
         }
-
     }
 
 
