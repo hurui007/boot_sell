@@ -8,3 +8,5 @@ spring:
     show-sql: true
 server:
   context-path: /sell
+jackson:
+  default-property-inclusion: non_null

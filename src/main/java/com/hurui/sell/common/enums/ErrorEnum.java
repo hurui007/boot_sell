@@ -1,6 +1,7 @@
 package com.hurui.sell.common.enums;
 
 public enum ErrorEnum {
+    PARAM_ERROR(1, "参数错误"),
     CAR_EMPTY(9, "购物车不能为空"),
     PRODUCT_NOT_EXIST(10, "商品不存在"),
     PRODUCT_STOCK_ERROR(11, "商品库存不正确"),

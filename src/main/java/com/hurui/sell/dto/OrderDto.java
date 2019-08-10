@@ -1,5 +1,8 @@
 package com.hurui.sell.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.hurui.sell.common.util.Date2LongSerializer;
 import com.hurui.sell.dataobject.OrderDetail;
 import lombok.Data;
 
@@ -8,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL) //为空的字段就不返回了
 public class OrderDto {
     /**
      * 订单id
@@ -47,10 +51,12 @@ public class OrderDto {
     /**
      * 创建时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
     /**
      * 更新时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
     /**
