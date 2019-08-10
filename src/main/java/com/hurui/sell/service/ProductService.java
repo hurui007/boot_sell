@@ -1,6 +1,7 @@
 package com.hurui.sell.service;
 
 import com.hurui.sell.dataobject.ProductInfo;
+import com.hurui.sell.dto.CarDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -37,4 +38,16 @@ public interface ProductService {
      * @return
      */
     ProductInfo save(ProductInfo productInfo);
+
+    /**
+     * @title 商品加库存
+     * @param carDtoList
+     */
+    void increaseStock(List<CarDto> carDtoList);
+
+    /**
+     * @title 商品减库存
+     * @param carDtoList
+     */
+    void decreaseStock(List<CarDto> carDtoList);
 }

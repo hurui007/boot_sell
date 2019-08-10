@@ -25,11 +25,11 @@ public class OrderMasterRepositoryTest {
     @Test
     public void saveTest(){
         OrderMaster orderMaster = new OrderMaster();
-        orderMaster.setOrderId("123456");
+        orderMaster.setOrderId("1234567");
         orderMaster.setBuyerName("师兄");
         orderMaster.setBuyerPhone("18665825977");
         orderMaster.setBuyerAddress("渝北");
-        orderMaster.setBuyerOpenid("12029010");
+        orderMaster.setBuyerOpenid("12");
         orderMaster.setOrderAmount(new BigDecimal("32"));
         orderMaster.setCreateTime(new Date());
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
